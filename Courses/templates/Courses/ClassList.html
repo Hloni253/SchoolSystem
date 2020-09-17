@@ -1,0 +1,20 @@
+{% extends 'Home/header.html' %}
+
+{% block content %}
+
+<body class="bg-light">
+
+<div class="text-center">
+	<h2>{{ course }}</h2>
+	<p class="text-muted">A list of all classes of course {{ course }}</p>
+</div>
+
+<div class="list-group">
+{% for class in classes.all %}
+	<a href="{{ class.Display_Topics }}"><button class="list-group-item list-group-item-action">{{ class }}</button></a>
+{% endfor %}
+</div>
+
+</body>
+
+{% endblock %}

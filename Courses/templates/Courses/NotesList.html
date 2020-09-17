@@ -1,0 +1,16 @@
+{% extends 'Home/header.html' %}
+
+{% block content %}
+
+<div class="text-center">
+	<h1>{{ topic }}</h1>
+	<p class="text-muted">Information from {{ topic }} in the class of {{ class }}</p>
+</div>
+
+{% for note in notes.all %}
+	<h2>{{ note.title }}</h2>
+	<small><p class="text-muted">{{ note.date.date }} by <a href="#">{{ note.author }}</a></p></small>
+	<p>{{ note.information }}</p>
+{% endfor %}
+
+{% endblock %}

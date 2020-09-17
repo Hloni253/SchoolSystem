@@ -1,0 +1,24 @@
+{% extends 'Home/header.html' %}
+
+{% block content %}
+
+<body class="bg-light">
+
+<div class="text-center">
+	<h2>Courses</h2>
+	<p class="text-muted">A list of all the courses</p>
+</div>
+
+<!--<h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Courses</span>
+</h4>
+-->
+
+<div class="list-group">
+{% for course in courses %}
+	<a href="{{ course.Display_Course }}"><button class="list-group-item list-group-item-action">{{ course }}</button></a>
+{% endfor %}
+
+</body>
+
+{% endblock %}

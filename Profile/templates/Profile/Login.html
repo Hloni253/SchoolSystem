@@ -1,0 +1,12 @@
+{% extends 'Home/header.html' %}
+
+{% block content %}
+
+<p class="text-muted">Don't have an account. <a href="/Profile/Register/">Register first</a></p>
+<form method="POST">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit">Submit</button>
+</form>
+
+{% endblock %}
